@@ -1,0 +1,34 @@
+<view class='main'>
+<view style='height: 5%'></view>
+  <view class='title'>{{photo.title}}</view>
+  <image class='img' src = "{{photo.img_url}}"></image>
+  <view class='dateBox'>
+    <text>{{photo.text_authors}}</text>
+    <text>{{photo.date}}</text>
+  </view>
+  <view class='content'>
+    <text>{{photo.content}}</text>
+  </view>
+  <view class='hr'></view>
+  <view class='messageBox'>
+    <image class='icon_message' src='../../imgs/message.png'></image>
+    <view class='pinglun'>评论</view>
+    <view class='msg_box'>
+      <view wx:for="{{messages}}" class='msg_list'>
+        <view class='userImg'>
+          <image src='{{item.avatarUrl}}'></image>
+        </view>
+        <view class='nickName'>{{item.userName}}</view>
+        <view class='sendTime'>{{item.message_post_time}}</view>
+        <view class='msg_content'>{{item.message_content}}</view>
+      </view>
+      <view style='height: 40px;'></view>
+    </view>
+  </view>
+  <view class='inputMessageBox'>
+    <input value='{{inputValue}}' bindinput='getMsg'></input>
+    <view class='sendMsgBtn' bindtap='sendMsg'>
+      <image src='../../imgs/send.png'></image>
+    </view>
+  </view>
+</view>

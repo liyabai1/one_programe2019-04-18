@@ -1,0 +1,83 @@
+<!--index.wxml-->
+<view class="container">
+<!-- <view class='bgcimg'></view> -->
+<!-- 最顶部的时间和天气显示 -->
+
+  <view class='dateANDweather'>
+    <!-- <text class="date">{{date}}</text> -->
+    <text style='margin-left: 10px;'>西安·</text>
+    <text class='weather'>{{weather}}·{{tmp_min}}℃✈{{tmp_max}}℃</text> 
+  </view>
+<!-- 页面标题显示 -->
+  <!-- <view class='title'>{{pageTitle}}</view> -->
+
+
+<!-- 显示图片页面 -->
+  <view class='content_photo {{nav_class_change.pic.display}}'>
+    <view data-index="{{index}}" wx:for="{{photoPageData}}" class='list_page'>
+      <image bindtap='prevImg' data-src = "{{item.img_url}}" data-index="{{index}}" class = "photos" src='{{item.img_url}}' mode='aspectFit'></image>
+      <text class='photo_author'>{{item.picture_author}}</text>
+      <view class='textBox' bindtap='nav_content' data-index="{{index}}">
+        <view class='textContent'>{{item.content}}</view>
+        <view class='textAuthor'>{{item.text_authors}}</view>
+      </view>
+      <view class='list_bottom'>
+        <text class='num'>{{item.title}}</text>
+        <text class='date'>{{item.date}}</text>
+      </view>
+    </view>
+    <view style='height: 80px;'></view>
+  </view>
+
+
+
+<!-- 显示视频页 -->
+  <view class='content_video {{nav_class_change.vid.display}}' style='height: {{contentHeight}}px;'>
+  视频界面
+  </view>
+
+
+
+<!-- 显示音乐页 -->
+  <view class='content_music {{nav_class_change.mus.display}}' style='height: {{contentHeight}}px;'>
+  音乐界面
+  </view>
+
+
+
+<!-- 显示我的页 -->
+  <view class='content_mine {{nav_class_change.mine.display}}' style='height: {{contentHeight}}px;'>
+    <view class='mine_info'>
+    <button class='getUserInfo_button' wx:if = "{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='display:{{display}}'>授权</button>
+      <view class='user_bcgImg' style='background-image:url({{user.imageUrl}})'></view>
+      <image src="{{user.imageUrl}}"></image>
+      <text>{{user.name}}</text>
+    </view>
+    <view class='mine_list'>
+      <view class='mine_message' bindtap='navToMessage'>管理员登录<text>></text>
+      </view>
+      <view class='mine_more' bindtap='navToMore'>更多功能 <text>></text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='nav'>
+    <view bindtap='nav_pagePhoto' class='nav_firstStatu {{nav_class_change.pic.color}}'>
+      <!-- <image src='../../imgs/nav_photo.png'></image> -->
+      图片
+    </view>
+    <view bindtap='nav_pageVideo' class='{{nav_class_change.vid.color}}'>
+      <!-- <image src='../../imgs/nav_video.png'></image> -->
+      视频
+    </view>
+    <view bindtap='nav_pageMusic' class='{{nav_class_change.mus.color}}'>
+      <!-- <image src='../../imgs/nav_music.png'></image> -->
+      音乐
+    </view>
+    <view bindtap='nav_pageMine' class='{{nav_class_change.mine.color}}'>
+      <!-- <image src='../../imgs/nav_mine.png'></image> -->
+      我的
+    </view>
+  </view>
+</view>

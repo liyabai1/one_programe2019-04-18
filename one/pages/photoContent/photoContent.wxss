@@ -1,0 +1,125 @@
+page{
+  width: 100%;
+  height: 100%;
+
+  overflow-y: auto;
+}
+.main{
+  width: 100%;
+  height: 100%;
+}
+.title{
+  width: 100%;
+  font-size: 18px;
+  line-height: 40px;
+  height: 40px;
+  text-align: center;
+}
+.img{
+  width: 100%;
+}
+.dateBox{
+  width: 100%;
+  height: 25px;
+  font-size: 10px;
+  position: relative;
+}
+.dateBox text:nth-child(1){
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  
+}
+.dateBox text:nth-child(2){
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}
+.content{
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+  font-size: 15px;
+}
+.hr{
+  width: 80%;
+  height: 3px;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 5px;
+  background-color: black;
+}
+.messageBox{
+
+}
+.icon_message{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+    margin-left: 20px;
+}
+.pinglun{
+  display: inline-block;
+  font-size: 13px;
+}
+.msg_box{
+  display: block;
+  width: 95%;
+}
+.inputMessageBox{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  background-color: white;
+}
+.inputMessageBox>input{
+  display: inline-block;
+  width: 85%;
+  height: 40px;
+  border: 2px black solid;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+}
+.inputMessageBox>.sendMsgBtn{
+  display: inline-block;
+  width: 15%;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+}
+.msg_list{
+  border-top: 2px rgba(200, 200, 200, 0.5) solid;
+  position: relative;
+}
+.sendMsgBtn image{
+  width: 100%;
+  height: 100%;
+}
+.userImg{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+.userImg image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.nickName{
+  display: inline-block;
+  margin-left: 5px;
+  font-style: italic;
+  font-size: 15px;
+}
+.msg_content{
+  margin-left: 25px;
+}
+.sendTime{
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  font-size: 12px;
+  color: rgb(129, 129, 129)
+}

@@ -1,0 +1,213 @@
+/**index.wxss**/
+page{
+  height: 100%;
+}
+.getUserInfo_button{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-left: -75px;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: green;
+  z-index: 99;
+}
+.bgcimg{
+  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555651413&di=eb0d749b43160c6c0c759c92d4b561e1&imgtype=jpg&er=1&src=http%3A%2F%2Fpic1.win4000.com%2Fmobile%2F2018-12-18%2F5c189cb4a161b.jpg');
+  background-size: 100% 100%;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.dateANDweather{
+  position: relative;
+  top: 30px;
+  left: 0px;
+  align-self: left;
+  font-size: 18px;
+  font-family: "宋体"
+}
+.date{
+  position: relative;
+  left: 5px;
+}
+.weather{
+  position: relative;
+  left: 5px;
+}
+.title{
+  display: inline-block;
+  margin-top: 30px;
+}
+.nav{
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  box-shadow: 0px -1px 9px 0px black;
+  background-color: white;
+}
+.nav>view{
+  display: inline-block;
+  width: 25%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.nav>view>image{
+  margin-top: 5px;
+  width: 50%;
+  height: 90%;
+}
+.nav_firstStatu{
+  color: greenyellow;
+}
+/* 导航栏结束 */
+
+/* 图片页面开始 */
+.content_photo{
+  display: block;
+  position: relative;
+  top: 35px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.list_page{
+  width: 100%;
+  border-bottom: 3px rgba(155, 155, 155, 0.5) solid;
+  margin-top: 5px;
+}
+.list_page>.photos{
+  width: 100%;
+}
+.photo_author{
+  display: inline-block;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 1px 5px 6px black;
+}
+.textBox{
+  display: block;
+  width: 100%;
+  background-color: rgba(233, 233, 233, 0.5);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 5px;
+  box-shadow: 0px 5px 13px 1px black;
+}
+.textBox>.textContent{
+  width: 70%;
+  margin: auto;
+  margin-top: 5px;
+  line-height: 25px;
+  font-family: "宋体";
+  font-size: 15px;
+  text-shadow: 0px 0px 6px rgba(50, 50, 50, 0.5);
+  text-align: center;
+}
+.textBox>.textAuthor{
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "楷体";
+  font-size: 12px;
+  color: rgba(55, 55, 55, 1);
+  font-weight: bold;
+}
+.list_bottom{
+  position: relative;
+  top: 5px;
+  height: 30px;
+  width: 100%;
+}
+.list_bottom>.num{
+  position: absolute;
+  left: 5px;
+  font-size: 12px;
+  text-align: left;
+}
+.list_bottom>.date{
+  position: absolute;
+  right: 5px;
+  font-size: 12px;
+  text-align: right;
+}
+
+
+/* 视频页开始 */
+.content_video{
+  display: none;
+}
+/* 音乐界面 */
+.content_music{
+  display: none;
+}
+
+/* 用户信息 */
+.content_mine{
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+.user_bcgImg{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  filter: blur(50px);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+.mine_info{
+  width: 100%;
+  height: 30%;
+}
+.mine_info>image{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 20px;
+
+}
+.mine_list{
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  height: 65%;
+  border-radius: 15px 15px 0px 0px;
+  background-color: white;
+}
+.mine_list>view{
+  overflow-x: hidden;
+  height: 40px;
+  width: 90%;
+  border-top: 2px rgba(233, 233, 233, 0.5) solid;
+  margin-top: 5px;
+  margin-left: 10px;
+  position: relative;
+}
+.mine_list>view>text{
+  position: absolute;
+  right: 5px;
+}
+
+
+/*控制导航栏显示*/
+.nav_change_color_y{
+  color: greenyellow;
+}
+.nav_change_color_b{
+  color: black;
+}
+.nav_change_display_none{
+  display: none;
+}
+.nav_change_display_block{
+  display: block;
+}

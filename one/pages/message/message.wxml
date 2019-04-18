@@ -1,0 +1,25 @@
+<view class='container message_main'>
+  <view class='back' bindtap='backHome'>×</view>
+  <view class='loginBox' style='display:{{logBox}}'>
+    <view class='welcome'>请登录或注册账号</view>
+    <view class='input_box'>
+      <text>账号：<text>由字母、数字或下划线组成</text></text>
+      <input type='text' value='' bindinput='getName'></input>
+    </view>
+    <view class='input_box'>
+      <text>密码：<text>密码不少于6尾数</text></text>
+      <input type='password'value='' bindinput='getPassword'></input>
+    </view>
+    <view class='log_btns'>
+      <!-- <button bindtap='log_in'>注册</button> -->
+      <button bindtap='logIn'>登录</button>
+    </view>
+  </view>
+  <view style='display:{{messagesBox}}'>
+    <text class='admWelcome'>您是管理员\n可以在下方留言\n您的留言会出现在明天的首页上^_^</text>
+    <textarea bindinput='getMessage'></textarea>
+    <view class='messages_btn'>
+      <button bindtap='submitMsg'>提交留言</button>
+    </view>
+  </view>
+</view>
